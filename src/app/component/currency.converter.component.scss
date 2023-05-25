@@ -1,48 +1,73 @@
-.currency-converter {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
+.container {
+    display: flex;
+    height: 60vh;
+    padding: 20px; // внутрішній відступ
+    margin: 70px auto; //відступ від гори
+    background: yellow ;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+
 
     h2 {
+        position: absolute;
+        top: 10%;
+        left: center;
         font-size: 25px;
-        margin-bottom: 10px;
+        margin: 20px;
+        border: 1px solid black;
+
     }
 
     header {
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 20px;
         font-size: 16px;
-    }
+        align-self: top;
+        border: 1px solid black;
+        }
 
-    .form {
-        display: flex;
-        flex-direction: column;
+        p {
+            border: 1px solid black;
+        }
+
+    .form-one {
         margin-bottom: 20px;
+        border: 1px solid black;
 
-        .input-group {
-            display: flex;
-            align-items: center;
+        .input-group-amount-one {
             margin-bottom: 10px;
+            border: 1px solid black;
+
 
             label {
-                margin-right: 10px;
-                font-size: 15px;
+                // margin-right: 10px;
+                // font-size: 15px;
             }
 
-            select,
+            select {
+               margin-left:  100px;
+           
+            }
+
             input {
                 padding: 5px;
                 font-size: 15px;
                 border-radius: 5px;
                 border: 1px solid #ccc;
+                align-items: center;
 
             }
         }
     }
 
+   
+    .input-group-fromcurrency {
+    }
+
     .result {
-        font-size: 20px;
-        font-weight: bold;
+        border: 1px solid black;
+
+        // font-size: 20px;
+        // font-weight: bold;
     }
 }

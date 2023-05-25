@@ -1,30 +1,51 @@
-<div class="currency-converter">
-    <h2>Конвертер валют v1</h2>
+<div class="container">
+
+    <h2>Convert rate v1</h2>
 
     <div class="header">
-        <p>Курс валют</p>
-        <p>1 {{ fromCurrency }} = {{ getRate(fromCurrency)?.sellRate}} {{ toCurrency }}</p>
+        <p>Exchange rate</p>
+        <p>{{ fromCurrency }} = {{ getRate(fromCurrency)?.sellRate}} {{ toCurrency }}</p>
     </div>
-    
      
-    <div class="form">
-        <div class="input-group">
-            <label for="amount">Кількість</label>
+    <div class="form-one">
+        
+        <div class="input-group-amount">
+            <label for="amount">Amount</label>
             <input type="number" id="amount" [(ngModel)]="amount" (input)="convertCurrency()"/>
         </div>
 
-    <div class="input-group">
-        <label for="fromCurrency">валюта</label>
-        <select id="fromCurrency" [(ngModel)]="fromCurrency" (change)="convertCurrency">
-            <option value="UAH">UAH</option>
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-        </select>
+        <div class="input-group-fromcurrency">
+            <label for="fromCurrency">Currency</label>
+            <select  id="fromCurrency" [(ngModel)]="fromCurrency" (change)="convertCurrency()">
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+
+        </div>
     </div>
-  </div>
-     
+
+    <div class="form-one">
+        
+        <div class="input-group-amount">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" [(ngModel)]="amount" (input)="convertCurrency()"/>
+        </div>
+
+        <div class="input-group-fromcurrency">
+            <label for="fromCurrency">Currency</label>
+            <select id="fromCurrency" [(ngModel)]="fromCurrency" (change)="convertCurrency()">
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+
+        </div>
+    </div>
+
     <div class="result">
-        <p>Результат:</p>
-        <p>{{ convertedAmount | number:'1.2-2' }}</p>
+        <p>Result:</p>
+        <input type="text">{{ convertedAmount | number:'1.2-2' }}
     </div>
+    
 </div>
