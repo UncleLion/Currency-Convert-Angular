@@ -11,16 +11,25 @@
         
         <div class="input-group-amount">
             <label for="amount">Amount</label>
-            <input type="number" id="amount" [(ngModel)]="amount" (input)="convertCurrency()"/>
+            <p-dropdown id="fromCurrency" [(ngModel)]="amount" placeholder="Select a City" (change)="convertCurrency()">
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </p-dropdown>
+            <!-- <p-autoComplete [(ngModel)]="amount" [dropdown]="true" [suggestions]="CurrencyConverterComponent " (completeMethod)="convertCurrency($event)" field="name"></p-autoComplete> -->
+
+
+
+            <!-- <input type="number" id="amount" [(ngModel)]="amount" (input)="convertCurrency()"/> -->
         </div>
 
         <div class="input-group-fromcurrency">
             <label for="fromCurrency">Currency</label>
-            <select  id="fromCurrency" [(ngModel)]="fromCurrency" (change)="convertCurrency()">
+            <!-- <select  id="fromCurrency" [(ngModel)]="fromCurrency" (change)="convertCurrency()">
                 <option value="UAH">UAH</option>
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
-            </select>
+            </select> -->
 
         </div>
     </div>
