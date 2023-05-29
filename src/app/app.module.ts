@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { CurrencyConverterComponent } from './component/currency.convert.component';
+import { AutocompleteTemplateDemo } from './component/currency.convert.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
     AppComponent,
-    CurrencyConverterComponent
+    AutocompleteTemplateDemo
   ],
   imports: [
     HttpClientModule,
