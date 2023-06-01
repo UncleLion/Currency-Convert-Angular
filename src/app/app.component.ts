@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dupa'
+  title = 'WorkSpace'
 
   productList = [];
   selectedProduct: any;
