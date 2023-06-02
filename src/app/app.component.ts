@@ -13,6 +13,8 @@ export class AppComponent {
 
   productList = [];
   selectedProduct: any;
+  value = [];
+
   
   search($event: any) {
     console.log($event)

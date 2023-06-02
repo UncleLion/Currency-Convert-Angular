@@ -1,0 +1,26 @@
+.container {
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    min-height: 570px;
+    max-width: none;
+}
+
+h1 {
+    margin-left: 100%;
+}
+
+input {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.auto-complete {
+    margin-left: 50px;
+    padding: 20px;
+}
