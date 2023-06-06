@@ -1,19 +1,22 @@
 
 <div class="container">
-    <div class="main">
-
+    <div class="main" >
         <h1>prosto nemozhluvo</h1>
 
-
         <div class="auto-complete">
-            <p-autoComplete [(ngModel)]="selectedProduct" [suggestions]="productList" (completeMethod)="search($event)" field="name"
-                [dropdown]="true"></p-autoComplete>
+            <p-autoComplete [(ngModel)]="selectedProduct" [suggestions]="productList" (completeMethod)="search($event)"
+                field="name" [dropdown]="true"></p-autoComplete>
 
-            <p-autoComplete [(ngModel)]="selectedProduct" [suggestions]="productList" (completeMethod)="search($event)" field="name"
-                [dropdown]="true"></p-autoComplete>
+            <i class="pi pi-arrow-right-arrow-left" style="font-size: 2rem"></i>
+
+            <p-autoComplete [(ngModel)]="selectedProduct" [suggestions]="productList" (completeMethod)="search($event)"
+                field="name" [dropdown]="true"></p-autoComplete>
         </div>
-           
+
         <input type="text" pInputText [(ngModel)]="value" />
+
+        <p-button label="Submit"></p-button>
+
 
     </div>
 </div>
