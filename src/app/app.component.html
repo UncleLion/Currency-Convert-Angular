@@ -1,9 +1,13 @@
 
 <div class="container">
-    <div class="main" >
-        <h1>prosto nemozhluvo</h1>
 
-        <div class="auto-complete">
+
+        <div class="main">
+
+            <h1>prosto nemozhluvo</h1>
+
+            <input type="text" pInputText [(ngModel)]="value" />
+
             <p-autoComplete [(ngModel)]="selectedProduct" [suggestions]="productList" (completeMethod)="search($event)"
                 field="name" [dropdown]="true"></p-autoComplete>
 
@@ -11,12 +15,13 @@
 
             <p-autoComplete [(ngModel)]="selectedProduct" [suggestions]="productList" (completeMethod)="search($event)"
                 field="name" [dropdown]="true"></p-autoComplete>
-        </div>
+            <div class="button" >
+                <p-button label="Convert" styleClass="p-button-lg"></p-button>
 
-        <input type="text" pInputText [(ngModel)]="value" />
+            </div>
 
-        <p-button label="Submit"></p-button>
 
 
     </div>
-</div>
+</div> 
+
