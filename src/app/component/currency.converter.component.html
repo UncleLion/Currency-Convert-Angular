@@ -1,0 +1,73 @@
+<div class="card flex justify-content-center">
+    <p-autoComplete [(ngModel)]="selectedCountryAdvanced" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [dropdown]="true">
+        <ng-template let-country pTemplate="item">
+            <div class="flex align-items-center gap-2">
+                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" style="width: 18px"/>
+                <div>{{ country.name }}</div>
+            </div>
+        </ng-template>
+    </p-autoComplete>
+</div>
+
+
+
+<div class="container">
+
+    <h2>Convert rate v1</h2>
+
+    <div class="header">
+        <p>Exchange rate</p>
+        <p>{{ fromCurrency }} = {{ getRate(fromCurrency)?.sellRate}} {{ toCurrency }}</p>
+    </div>
+     
+    <div class="form-one">
+        
+        <div class="input-group-amount">
+            <label for="amount">Amount</label>
+            <p-dropdown id="fromCurrency" [(ngModel)]="amount" placeholder="Select a City" (change)="convertCurrency()">
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </p-dropdown>
+            <!-- <p-autoComplete [(ngModel)]="amount" [dropdown]="true" [suggestions]="CurrencyConverterComponent " (completeMethod)="convertCurrency($event)" field="name"></p-autoComplete> -->
+
+
+
+            <!-- <input type="number" id="amount" [(ngModel)]="amount" (input)="convertCurrency()"/> -->
+        </div>
+
+        <div class="input-group-fromcurrency">
+            <label for="fromCurrency">Currency</label>
+            <!-- <select  id="fromCurrency" [(ngModel)]="fromCurrency" (change)="convertCurrency()">
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select> -->
+
+        </div>
+    </div>
+
+    <div class="form-one">
+        
+        <div class="input-group-amount">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" [(ngModel)]="amount" (input)="convertCurrency()"/>
+        </div>
+
+        <div class="input-group-fromcurrency">
+            <label for="fromCurrency">Currency</label>
+            <select id="fromCurrency" [(ngModel)]="fromCurrency" (change)="convertCurrency()">
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="result">
+        <p>Result:</p>
+        <input type="text">{{ convertedAmount | number:'1.2-2' }}
+    </div>
+    
+</div>

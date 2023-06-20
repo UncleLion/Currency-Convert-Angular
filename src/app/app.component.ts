@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { HttpClient } from '@angular/common/http';
 
 
+=======
+>>>>>>> refs/remotes/origin/main
 
 @Component({
   selector: 'app-root',
@@ -9,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+<<<<<<< HEAD
   title = 'WorkSpace'
 
   productList = [];
@@ -22,3 +26,7 @@ export class AppComponent {
 }
   
 
+=======
+  title = 'currency-convert-';
+}
+>>>>>>> refs/remotes/origin/main
